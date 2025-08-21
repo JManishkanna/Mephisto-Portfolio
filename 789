@@ -1,0 +1,71 @@
+<!--radio buttons-->
+
+<RadioButton
+
+android:id="@+id/idBtnJavaRadio"
+
+android:layout_width="wrap_content"
+
+android:layout_height="wrap_content"
+
+android:text="Java"
+
+android:textSize="20sp" />
+
+<RadioButton
+
+android:id="@+id/idBtnKotlinRadio"
+
+android:layout_width="wrap_content"
+
+android:layout_height="wrap_content"
+
+android:text="Kotlin"
+
+android:textSize="20sp" />
+
+</RadioGroup>
+
+</LinearLayout>
+
+package com.example.radio1;
+
+import android.os.Bundle;
+
+import android.widget.*;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+@Override
+
+protected void onCreate(Bundle savedInstanceState) {
+
+super.onCreate(savedInstanceState);
+
+setContentView(R.layout.activity_main);
+
+RadioGroup radioGroup = findViewById(R.id.rg);
+
+TextView textView = findViewById(R.id.tv1);
+
+Radio Button in Android
+
+Kutlin
+
+Flumar
+
+// Set listener on RadioGroup
+
+radioGroup.setOnCheckedChangeListener(new RadioGroup.OnChecked ChangeListener() {
+
+@Override
+
+public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+RadioButton radioButton = group.findViewById(checkedld);
+
+if (radioButton != null) {
+
+textView.setText(radioButton.getText()); } } }); }}
